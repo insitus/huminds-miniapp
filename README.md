@@ -1,2 +1,1 @@
-# huminds-miniapp
-Telegram mini app for huminds
+# Huminds mini app for telegram
