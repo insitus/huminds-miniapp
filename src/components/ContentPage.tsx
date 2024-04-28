@@ -14,6 +14,8 @@ export function ContentPage({ onBackPress }: Props) {
     const [storageResponse, setStorageResponse] = useState('');
     const [storage, setStorage] = useState('');
 
+    const [data, setData] = useState('');
+
     // get window size
     // const [windowSize, setWindowSize] = useState({
     //     width: window.innerWidth,
@@ -38,21 +40,25 @@ export function ContentPage({ onBackPress }: Props) {
         const data = (window as any).Telegram?.WebApp?.initData;
         if (!data) return '';
 
-        return JSON.stringify(data, null, 2);
+        const jsonData = JSON.stringify(data, null, 2);
+        setData(jsonData);
     }
 
     const initData2 = () => {
         const data = (window as any).Telegram?.WebAppInitData;
         if (!data) return '';
 
-        return JSON.stringify(data, null, 2);
+        const jsonData = JSON.stringify(data, null, 2);
+        setData(jsonData);
+
     }
 
     const initData3 = () => {
         const data = (window as any).Telegram?.WebAppUser;
         if (!data) return '';
 
-        return JSON.stringify(data, null, 2);
+        const jsonData = JSON.stringify(data, null, 2);
+        setData(jsonData);
     }
 
     const getStorage = () => {
@@ -102,13 +108,13 @@ export function ContentPage({ onBackPress }: Props) {
                 }
             }} className="m-4">Main button</Button>
 
-            <Button onClick={() => {
+            {/* <Button onClick={() => {
                 (window as any).Telegram.WebApp.sendData({ data: '/start' })
             }} className="m-4">Test sending command start 1</Button>
 
             <Button onClick={() => {
                 (window as any).Telegram.WebApp.sendData('/start');
-            }} className="m-4">Test sending command start 2</Button>
+            }} className="m-4">Test sending command start 2</Button> */}
 
             <Button onClick={() => {
                 (window as any).Telegram.WebApp.requestContact(function (result: any) {
@@ -121,14 +127,14 @@ export function ContentPage({ onBackPress }: Props) {
             }} className="m-4">Test request contact</Button>
 
 
-            <Button onClick={() => {
+            {/* <Button onClick={() => {
                 (window as any).Telegram.WebApp.showConfirm('confirmation message here');
-            }} className="m-4">Test showConfirm</Button>
+            }} className="m-4">Test showConfirm</Button> */}
 
 
-            <Button onClick={() => {
+            <Button onPressStart={() => {
                 (window as any).Telegram.WebApp.HapticFeedback.impactOccurred('soft');
-            }} className="m-4">Test Haptic Soft</Button>
+            }} className="m-4">On press Haptic Soft</Button>
 
 
             <Button onClick={() => {
@@ -156,12 +162,14 @@ export function ContentPage({ onBackPress }: Props) {
                 <p>{storageResponse}</p>
             </div>
 
+
+            <Button onClick={() => initData()} className="m-4">Data 1</Button>
+            <Button onClick={() => initData2()} className="m-4">Data 2</Button>
+            <Button onClick={() => initData3()} className="m-4">Data 3</Button>
+
             <div className="flex justify-center mt-3">
-                <p>{initData()}</p>
-
-                <p>{initData2()}</p>
-
-                <p>{initData3()}</p>
+                <p>{'Data: '}</p>
+                <p>{data}</p>
             </div>
 
         </div>
