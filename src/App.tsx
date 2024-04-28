@@ -1,6 +1,4 @@
 import { useState } from 'react';
-// import WebApp from '@twa-dev/sdk'
-// import { Button } from "@nextui-org/button";
 
 import { NextUIProvider } from '@nextui-org/react';
 import './App.css'
