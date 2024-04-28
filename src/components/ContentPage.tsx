@@ -12,6 +12,7 @@ interface Props {
 export function ContentPage({ onBackPress }: Props) {
 
     const [storageResponse, setStorageResponse] = useState('');
+    const [storage, setStorage] = useState('');
 
     // get window size
     // const [windowSize, setWindowSize] = useState({
@@ -58,7 +59,8 @@ export function ContentPage({ onBackPress }: Props) {
         const data = (window as any).Telegram?.WebApp?.CloudStorage?.getItem('key');
         if (!data) return '';
 
-        return JSON.stringify(data, null, 2);
+        const jsonData = JSON.stringify(data, null, 2);
+        setStorage(jsonData);
     }
 
     return (
@@ -139,13 +141,18 @@ export function ContentPage({ onBackPress }: Props) {
 
             }} className="m-4">Test Storage</Button>
 
+
+            <Button onClick={() => {
+                getStorage();
+            }} className="m-4">Show storage data</Button>
+
             <div className="flex justify-center mt-3">
-                <h1>{'Storage'}</h1>
-                <p>{getStorage()}</p>
+                <h1>{'Storage data: '}</h1>
+                <p>{storage}</p>
             </div>
 
             <div className="flex justify-center mt-3">
-                <h1>{'Storage response'}</h1>
+                <h1>{'Storage response: '}</h1>
                 <p>{storageResponse}</p>
             </div>
 
