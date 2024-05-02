@@ -44,6 +44,14 @@ export function hideMainButton() {
 }
 
 
+// export function openLinkInsideApp(link: string) {
+//     WebApp.openTelegramLink(link);
+// }
+
+export function openInstanView(link: string) {
+    WebApp.openLink(link, { try_instant_view: true });
+}
+
 
 /* Cloud STORAGE */
 export type SectionID = '1' | '2' | '3' | '4' | '5' | '6' | '7';

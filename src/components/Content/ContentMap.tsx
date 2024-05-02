@@ -20,6 +20,7 @@ import coverKatia from '../../assets/videos/katia.jpg';
 import coverValya from '../../assets/videos/valya.jpg';
 import coverInvitation from '../../assets/videos/invitation.jpg';
 import coverReviews from '../../assets/videos/reviews.jpg';
+import { buttonHapticFeedback, openInstanView } from '../../WebApp/useWebapp';
 
 function Title({ title }: { title: string }) {
     return (
@@ -68,6 +69,14 @@ const Video = ({ src, cover }: { src: string; cover?: string; }) => {
             Your browser does not support the video tag.
         </video>
     )
+}
+
+const onCalendarClick = () => {
+    openInstanView('https://calendar.app.google/nNj7is3k7yvtmn4E6');
+}
+
+const onOpenProgramClick = () => {
+    openInstanView('https://www.huminds.com/ru/course');
 }
 
 export const contentMap: ContentMap = [
@@ -242,7 +251,10 @@ export const contentMap: ContentMap = [
                 </Paragraph>
 
                 <div className='flex  justify-center mb-10 mt-10'>
-                    <Button color="secondary" variant="solid" style={{ color: 'white' }}>
+                    <Button color="secondary" variant="solid" style={{ color: 'white' }}
+                        onPressStart={() => buttonHapticFeedback()}
+                        onClick={onOpenProgramClick}
+                    >
                         О программе “Путь к себе”
                     </Button>
                 </div>
@@ -253,7 +265,9 @@ export const contentMap: ContentMap = [
                 </Paragraph>
 
                 <div className='flex  justify-center mb-10 mt-10'>
-                    <Button color="primary" variant="solid" style={{ color: 'white' }}>
+                    <Button color="primary" variant="solid" style={{ color: 'white' }}
+                        onPressStart={() => buttonHapticFeedback()}
+                        onClick={onCalendarClick}>
                         Забронировать встречу
                     </Button>
                 </div>
