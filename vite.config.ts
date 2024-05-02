@@ -9,5 +9,5 @@ export default defineConfig({
     build: {
         outDir: './docs'
     },
-    // base: '/huminds-miniapp/'
+    base: '/huminds-miniapp/'
 });
