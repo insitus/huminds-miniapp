@@ -4,6 +4,10 @@ import { ModuleCard } from './ModuleCard';
 
 // import humindsLogo from '../assets/huminds.png'; // dark theme
 import humindsLogo from '../assets/huminds_black.png';
+import instagramLogo from '../assets/socials/instagram-128.png';
+import telegramLogo from '../assets/socials/telegram-128.png';
+import youtubeLogo from '../assets/socials/youtube-128.png';
+
 import thumbnail1 from '../assets/1-01.png';
 import thumbnail2 from '../assets/2-01.png';
 import thumbnail3 from '../assets/3-01.png';
@@ -124,6 +128,23 @@ export function IndexPage({ onSelect }: Props) {
                 sectionNumber={7}
                 onSelect={onSelect}
             />
+
+            <div className='flex justify-between m-20 '>
+
+                <a href="https://www.instagram.com/olga.huminds/" target="_blank">
+                    <img src={instagramLogo} alt="Huminds logo" width={50} />
+                </a>
+
+                <a href="https://t.me/olgasjourney" target="_blank">
+                    <img src={telegramLogo} alt="Huminds logo" width={50} />
+                </a>
+
+                <a href="https://www.youtube.com/@huminds/videos" target="_blank">
+                    <img src={youtubeLogo} alt="Huminds logo" width={50} />
+                </a>
+
+            </div>
+
         </div>
     )
 }
