@@ -129,18 +129,18 @@ export function IndexPage({ onSelect }: Props) {
                 onSelect={onSelect}
             />
 
-            <div className='flex justify-between m-20 '>
+            <div className='flex justify-between m-20 mb-10'>
 
                 <a href="https://www.instagram.com/olga.huminds/" target="_blank">
-                    <img src={instagramLogo} alt="Huminds logo" width={50} />
+                    <img src={instagramLogo} alt="Huminds logo" width={40} />
                 </a>
 
                 <a href="https://t.me/olgasjourney" target="_blank">
-                    <img src={telegramLogo} alt="Huminds logo" width={50} />
+                    <img src={telegramLogo} alt="Huminds logo" width={40} />
                 </a>
 
                 <a href="https://www.youtube.com/@huminds/videos" target="_blank">
-                    <img src={youtubeLogo} alt="Huminds logo" width={50} />
+                    <img src={youtubeLogo} alt="Huminds logo" width={40} />
                 </a>
 
             </div>
