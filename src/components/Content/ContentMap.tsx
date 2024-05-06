@@ -1,10 +1,15 @@
 import { Button, Image, Link } from '@nextui-org/react';
-import audio1 from '../../assets/audios/1_greetings.mp3';
-import audio2 from '../../assets/audios/2_source_of_problems.mp3';
-import audio3 from '../../assets/audios/3_nature_of_negativity.mp3';
-import audio4 from '../../assets/audios/4_nature_of_fear.mp3';
-import audio5 from '../../assets/audios/5_practice.mp3';
-import audio6 from '../../assets/audios/6_qa.mp3';
+import { ContentMap } from '../../../types/types';
+
+import srcAudio1 from '../../assets/audios/1_greetings.mp3';
+import srcAudio2 from '../../assets/audios/2_source_of_problems.mp3';
+import srcAudio3 from '../../assets/audios/3_nature_of_negativity.mp3';
+import srcAudio4 from '../../assets/audios/4_nature_of_fear.mp3';
+import srcAudio5 from '../../assets/audios/5_practice.mp3';
+import srcAudio6 from '../../assets/audios/6_qa.mp3';
+
+
+
 
 import howToSit from '../../assets/how_to_sit.png';
 import imageReview from '../../assets/review.png';
@@ -21,6 +26,15 @@ import coverValya from '../../assets/videos/valya.jpg';
 import coverInvitation from '../../assets/videos/invitation.jpg';
 import coverReviews from '../../assets/videos/reviews.jpg';
 import { buttonHapticFeedback, openInstanView } from '../../WebApp/useWebapp';
+
+
+const audio1 = { artist: 'Huminds', title: 'Добро пожаловать', src: srcAudio1 };
+const audio2 = { artist: 'Huminds', title: 'Источник наших проблем', src: srcAudio2 };
+const audio3 = { artist: 'Huminds', title: 'Природа негативности', src: srcAudio3 };
+const audio4 = { artist: 'Huminds', title: 'Природа страха', src: srcAudio4 };
+const audio5 = { artist: 'Huminds', title: 'Практика', src: srcAudio5 };
+const audio6 = { artist: 'Huminds', title: 'Вопросы и ответы', src: srcAudio6 };
+
 
 function Title({ title }: { title: string }) {
     return (
@@ -39,12 +53,6 @@ function SubTitle({ subtitle }: { subtitle: string }) {
         </div>
     )
 }
-
-type ContentMap = {
-    Title: JSX.Element;
-    Content: JSX.Element;
-    audio: string;
-}[];
 
 const Paragraph = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -108,7 +116,7 @@ export const contentMap: ContentMap = [
                 </Paragraph>
 
                 <div className="flex justify-center  mt-10 mb-10">
-                    <Audioplayer src={audio2} />
+                    <Audioplayer audio={audio2} />
                 </div>
 
                 <SubTitle subtitle="Что происходит, когда мы избавляемся от страха" />
@@ -125,7 +133,7 @@ export const contentMap: ContentMap = [
                 </div>
             </>
         ),
-        audio: '',
+        audio: null,
     },
     {
         Title: <Title title="Развеиваем главный миф о негативных эмоциях" />,
@@ -182,12 +190,12 @@ export const contentMap: ContentMap = [
                 <SubTitle subtitle="“Отпускание тревоги и страха”" />
 
                 <div className="flex justify-center">
-                    <Audioplayer src={audio5} />
+                    <Audioplayer audio={audio5} />
                 </div>
 
             </>
         ),
-        audio: '',
+        audio: null,
     },
     {
         Title: <Title title="Вопросы и ответы" />,
@@ -247,7 +255,7 @@ export const contentMap: ContentMap = [
                 </Paragraph> */}
                 <Paragraph>
                     Длительность: <Bold>от 5 до 10 недель</Bold>
-                    <div>Старт: <Bold>20 мая</Bold></div>
+                    <div>Старт: <Bold>2 июня</Bold></div>
                 </Paragraph>
 
                 <div className='flex  justify-center mb-10 mt-10'>
@@ -287,7 +295,7 @@ export const contentMap: ContentMap = [
 
             </>
         ),
-        audio: '',
+        audio: null,
     },
 
 ];

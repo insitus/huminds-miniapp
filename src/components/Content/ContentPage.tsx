@@ -50,7 +50,7 @@ export function ContentPage({ sectionNumber, onBackPress }: Props) {
 
             {content.audio && (
                 <div className="flex justify-center  mt-10">
-                    <Audioplayer src={content.audio} />
+                    <Audioplayer audio={content.audio} />
                 </div>
             )}
 

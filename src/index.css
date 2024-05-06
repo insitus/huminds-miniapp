@@ -30,6 +30,10 @@ div.rhap_container {
     padding: 20px;
 }
 
+div.react-h5-audio-player {
+    width: 50px;
+}
+
 .rhap_main-controls-button {
     color: #154D5A;
 }

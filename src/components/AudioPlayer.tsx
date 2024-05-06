@@ -1,19 +1,25 @@
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import { AudioContent } from '../../types/types';
 
 interface Props {
-    src: string;
+    audio: AudioContent;
 }
 
-export function Audioplayer({ src }: Props) {
+export function Audioplayer({ audio }: Props) {
+
+    const onPlay = () => {
+        // update matadata
+        navigator.mediaSession.metadata = new MediaMetadata({ title: audio.title, artist: audio.artist });
+        // window.MediaSession.metadata = new MediaMetadata({ title: audio.title, artist: audio.artist });
+    }
+
     return (
         <AudioPlayer
             autoPlay={false}
-            src={src}
+            src={audio.src}
             // onPlay={(e: any) => {
-            onPlay={() => {
-                // console.log(e, "onPlay");
-            }}
+            onPlay={onPlay}
             progressJumpStep={5000}
             // customControlsSection={[]}
             customVolumeControls={[]}
