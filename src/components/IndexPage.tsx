@@ -69,7 +69,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail1}
                 upperTitle="Часть 1/7"
-                title="Добро пожаловать!"
+                title="Первый шаг: от теории к действиям"
                 underTitle="8 мин"
                 sectionNumber={1}
                 onSelect={onSelect}
@@ -78,7 +78,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail2}
                 upperTitle="Часть 2/7"
-                title="В чем корень наших проблем"
+                title="В чем истинный корень проблем: сужаем фокус"
                 underTitle="11 мин"
                 sectionNumber={2}
                 onSelect={onSelect}
@@ -87,7 +87,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail3}
                 upperTitle="Часть 3/7"
-                title="Развеиваем главный миф о негативных эмоциях"
+                title="Страх как иллюзия: убираем барьеры к свободе"
                 underTitle="13 мин"
                 sectionNumber={3}
                 onSelect={onSelect}
@@ -96,7 +96,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail4}
                 upperTitle="Часть 4/7"
-                title="Что такое страх и как его преодолеть"
+                title="От борьбы к принятию: скрытая сила для победы над страхом"
                 underTitle="9 мин"
                 sectionNumber={4}
                 onSelect={onSelect}
@@ -105,7 +105,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail5}
                 upperTitle="Часть 5/7"
-                title="Практика: “Отпускание тревоги и страха”"
+                title="Аудио-практика “Отпускание тревоги и страха”"
                 underTitle="24 мин"
                 sectionNumber={5}
                 onSelect={onSelect}
@@ -114,7 +114,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail6}
                 upperTitle="Часть 6/7"
-                title="Вопросы и ответы "
+                title="Интеграция урока: ответы на вопросы о методе отпускания"
                 underTitle="11 мин"
                 sectionNumber={6}
                 onSelect={onSelect}
@@ -123,7 +123,7 @@ export function IndexPage({ onSelect }: Props) {
             <ModuleCard
                 thumbnail={thumbnail7}
                 upperTitle="Часть 7/7"
-                title="Следующий шаг"
+                title="Следующий шаг: системный путь к самопознанию"
                 underTitle="4 мин"
                 sectionNumber={7}
                 onSelect={onSelect}
