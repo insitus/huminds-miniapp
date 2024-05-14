@@ -273,8 +273,8 @@ export const contentMap: ContentMap = [
                 </Paragraph>
 
                 <Paragraph>
-                    Длительность: <Bold>от 5 до 10 недель</Bold>
-                    <div>Старт: <Bold>2 июня</Bold></div>
+                    Длительность: <Bold>5 недель</Bold>
+                    <div>Старт: <Bold>7 июля</Bold></div>
                 </Paragraph>
 
                 <div className='flex  justify-center mb-10 mt-10'>
